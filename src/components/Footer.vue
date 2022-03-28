@@ -69,7 +69,7 @@ export default {
         },
         {
           text: "Comics",
-          current: true,
+          current: false,
         },
         {
           text: "Movies",
