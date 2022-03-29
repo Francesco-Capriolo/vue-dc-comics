@@ -1,6 +1,6 @@
 <template>
   <div>
-    <section id="head">
+    <section id="head" class="my-container">
       <div class="image-dc">
         <img src="../assets/img/dc-logo.png" alt="DC logo" />
       </div>
@@ -74,18 +74,27 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "../assets/scss/style.scss";
 @import "../assets/scss/partial/_variables.scss";
+section#head,
+div,
+ul,
+li {
+  display: flex;
+}
+section#head,
+div {
+  align-items: center;
+}
 
 section#head {
   height: 100px;
-  display: flex;
   justify-content: space-between;
-  align-items: center;
+
   div {
-    display: flex;
     height: 100%;
-    align-items: center;
     margin-left: 1rem;
+
     img {
       width: 80%;
       min-width: 80px;
@@ -93,16 +102,13 @@ section#head {
   }
   ul {
     height: 100%;
-    display: flex;
     margin-right: 1rem;
     align-content: center;
-
     li {
-      display: flex;
-      align-items: center;
       list-style-type: none;
       margin: 0 0.5rem;
       border-bottom: 2px solid transparent;
+      line-height: 100px;
 
       &:hover,
       &.active {
@@ -112,7 +118,6 @@ section#head {
         text-decoration: none;
         text-transform: uppercase;
         color: black;
-
         &:hover,
         &.active {
           color: $brandColor;

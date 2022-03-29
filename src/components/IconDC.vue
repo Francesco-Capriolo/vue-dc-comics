@@ -1,8 +1,11 @@
 <template>
-  <div>
-    <section id="Icons-dc">
-      <div v-for="(element, index) in listIcons" :key="index">
-        <img :src="element.image" :alt="element.text" />
+  <div class="bg-primary">
+    <section id="Icons-dc" class="my-container">
+      <div v-for="(element, index) in listIcons" :key="index" class="mini-card">
+        <img
+          :src="require(`../assets/img/${element.image}`)"
+          :alt="element.text"
+        />
         <span>{{ element.text }}</span>
       </div>
     </section>
@@ -17,23 +20,23 @@ export default {
       listIcons: [
         {
           text: "digital comics",
-          image: "../assets/img/buy-comics-digital-comics.png",
+          image: "buy-comics-digital-comics.png",
         },
         {
           text: "dc merchandise",
-          image: "../assets/img/buy-comics-merchandise.png",
+          image: "buy-comics-merchandise.png",
         },
         {
           text: "subscription",
-          image: "../assets/img/buy-comics-subscriptions.png",
+          image: "buy-comics-subscriptions.png",
         },
         {
           text: "comic shop locator",
-          image: "../assets/img/buy-comics-shop-locator.png",
+          image: "buy-comics-shop-locator.png",
         },
         {
           text: "dc power visa",
-          image: "../assets/img/buy-dc-power-visa.svg",
+          image: "buy-dc-power-visa.svg",
         },
       ],
     };
@@ -42,18 +45,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "../assets/scss/style.scss";
 @import "../assets/scss/partial/_variables.scss";
 
+.bg-primary {
+  background-color: $brandColor;
+}
 #Icons-dc {
   height: 100px;
-  background-color: $brandColor;
-  display: flex;
   justify-content: space-evenly;
-  align-items: center;
   div {
     height: 50%;
-    display: flex;
-    align-items: center;
   }
   img {
     height: 100%;
@@ -63,5 +65,11 @@ export default {
     padding: 1rem;
     text-transform: uppercase;
   }
+}
+
+#Icons-dc,
+.mini-card {
+  display: flex;
+  align-items: center;
 }
 </style>

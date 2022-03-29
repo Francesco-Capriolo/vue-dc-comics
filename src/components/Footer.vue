@@ -1,7 +1,7 @@
 <template>
   <div>
     <div id="dc-footer">
-      <div class="footer-list">
+      <div class="footer-list my-container">
         <div class="list list-comics">
           <ul>
             <h4>dc comics</h4>
@@ -43,17 +43,19 @@
         </div>
       </div>
     </div>
-    <div id="footer-bottom">
-      <button class="button-signUp">sign-Up now!</button>
-      <div class="follow">
-        <h3>follow us</h3>
-        <img src="../assets/img/footer-facebook.png" alt="" />
-        <img src="../assets/img/footer-twitter.png" alt="" />
-        <img src="../assets/img/footer-youtube.png" alt="" />
-        <img src="../assets/img/footer-pinterest.png" alt="" />
-        <img src="../assets/img/footer-periscope.png" alt="" />
+    <section class="bg-dark">
+      <div id="footer-bottom" class="my-container">
+        <button class="button-signUp">sign-Up now!</button>
+        <div class="follow">
+          <h3>follow us</h3>
+          <img src="../assets/img/footer-facebook.png" alt="" />
+          <img src="../assets/img/footer-twitter.png" alt="" />
+          <img src="../assets/img/footer-youtube.png" alt="" />
+          <img src="../assets/img/footer-pinterest.png" alt="" />
+          <img src="../assets/img/footer-periscope.png" alt="" />
+        </div>
       </div>
-    </div>
+    </section>
   </div>
 </template>
 
@@ -110,6 +112,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "../assets/scss/style.scss";
 @import "../assets/scss/partial/_variables.scss";
 
 #dc-footer {
@@ -120,7 +123,7 @@ export default {
   background-size: cover;
   .footer-list {
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     background-image: url(../assets/img/dc-logo-bg.png);
     background-size: no-repeat;
     background-position: right center;
@@ -143,9 +146,11 @@ export default {
     }
   }
 }
+.bg-dark {
+  background-color: #303030;
+}
 #footer-bottom {
   height: 100px;
-  background-color: #303030;
   display: flex;
   justify-content: space-between;
   align-items: center;

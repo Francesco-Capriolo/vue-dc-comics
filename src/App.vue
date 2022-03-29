@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <Header />
-    <IconDC />
     <Container />
+    <IconDC />
     <Footer />
   </div>
 </template>
@@ -17,8 +17,8 @@ export default {
   name: "App",
   components: {
     Header,
-    IconDC,
     Container,
+    IconDC,
     Footer,
   },
 };
